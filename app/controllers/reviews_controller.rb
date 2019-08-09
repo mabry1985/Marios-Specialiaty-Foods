@@ -8,16 +8,17 @@ class ReviewsController < ApplicationController
 
   def new
     @product = Product.find(params[:product_id])
-    @review = Review.new
+      @review = @product.reviews.new
     render :new
   end
 
   def create
     @product = Product.find(params[:product_id])
-    @review = Review.new(review_params)
-    if @product.save
+    @review = @product.reviews.new(review_params)
+    binding.pry
+    if @review.save!
       flash[:notice] = "Review added to database"
-      redirect_to product_reviews_path(@product)
+      redirect_to product_path(@product)
     else
       render :new
     end
