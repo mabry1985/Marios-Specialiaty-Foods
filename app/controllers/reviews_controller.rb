@@ -1,6 +1,7 @@
 class ReviewsController < ApplicationController
 
   def index
+    @product = Product.find(params[:product_id])
     @reviews = Review.all
     render :index
   end
@@ -12,8 +13,9 @@ class ReviewsController < ApplicationController
   end
 
   def create
+    @product = Product.find(params[:product_id])
     @review = Review.new(review_params)
-    if @review.save
+    if @product.save
       flash[:notice] = "Review added to database"
       redirect_to product_reviews_path(@product)
     else
@@ -43,9 +45,10 @@ class ReviewsController < ApplicationController
 
   def destroy
     def destroy
+      @product = Product.find(params[:id])
       @review = Review.find(params[:id])
       @review.destroy
-      redirect_to reviews_path
+      redirect_to product_reviews_path(@product)
     end
   end
 
