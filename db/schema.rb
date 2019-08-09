@@ -27,11 +27,11 @@ ActiveRecord::Schema.define(version: 2019_08_09_155613) do
     t.string "author"
     t.integer "rating"
     t.text "content_body"
-    t.bigint "products_id"
+    t.bigint "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["products_id"], name: "index_reviews_on_products_id"
+    t.index ["product_id"], name: "index_reviews_on_product_id"
   end
 
-  add_foreign_key "reviews", "products", column: "products_id"
+  add_foreign_key "reviews", "products"
 end
