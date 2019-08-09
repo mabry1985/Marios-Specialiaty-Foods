@@ -1,0 +1,14 @@
+<% if @product.reviews.any? %>
+  <h4>Product Reviews:</h4>
+  <% @product.reviews.each do |review| %>
+  <ul>
+    <li>
+      <%= review.content_body %> <br>
+      <%= review.rating %> <br>
+      <%= link_to review.author, product_review_path(@product, review) %>
+    </li>
+  </ul>
+  <% end %>
+  <% else %>
+    <p>There are no reviews for this product yet</p>
+  <% end %>

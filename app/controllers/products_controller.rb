@@ -24,13 +24,30 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
-    binding.pry
     render :show
   end
 
   def edit
-    @album = Album.find(params[:id])
+    @product = Product.find(params[:id])
     render :edit
+  end
+
+  def update
+    @product= Product.find(params[:id])
+    @product.save
+    if @product.update(product_params)
+      redirect_to products_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    def destroy
+      @product = Product.find(params[:id])
+      @product.destroy
+      redirect_to products_path
+    end
   end
 
   private
