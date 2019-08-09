@@ -1,24 +1,21 @@
-# README
+# _Mario's Speciality Foods_
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### By _**Josh Mabry**_
 
-Things you may want to cover:
+## Description
 
-* Ruby version
+_A web application demonstrating my ability to use Ruby and Rails to route a site and create CRUD functionality using ActiveRecord and psql._
 
-* System dependencies
+## Setup/Installation Requirements
 
-* Configuration
+* Clone or download and run gem bundle install in the root directory
+* Run rails s and navigate to localhost:3000 in your browser
 
-* Database creation
+## Known Bugs
+* No known Bugs
 
-* Database initialization
+### License
 
-* How to run the test suite
+* _open source_
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Copyright (c) 2019 **_Josh Mabry_**
