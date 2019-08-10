@@ -12,7 +12,7 @@ _A web application demonstrating my ability to use Ruby and Rails to route a sit
 * Run rails s and navigate to localhost:3000 in your browser
 
 ## Known Bugs
-* No known Bugs
+* No known bugs
 
 ### License
 
