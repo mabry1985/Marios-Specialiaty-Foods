@@ -8,5 +8,12 @@
 <% end %>
 </ul>
 
+<h3> American Made Products </h3>
+<ul>
+<% @american_made.each do |a| %>
+  <li> <%= link_to a.name, product_path(a)%> </li>
+<% end %>
+</ul>
+
 <p><%= link_to "Add new product", new_product_path %></p>
 <p><%= link_to "View all Products", all_products_path %></p>

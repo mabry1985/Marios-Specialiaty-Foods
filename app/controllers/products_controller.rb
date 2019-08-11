@@ -3,6 +3,7 @@ require 'pry'
 class ProductsController < ApplicationController
 
   def index
+    @american_made = Product.murica
     @top = Product.three_most_recent
     render :index
   end
