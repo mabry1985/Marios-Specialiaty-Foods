@@ -3,8 +3,13 @@ require 'pry'
 class ProductsController < ApplicationController
 
   def index
-    @products = Product.all
+    @top = Product.three_most_recent
     render :index
+  end
+
+  def all
+    @products = Product.all
+    render :all
   end
 
   def new
