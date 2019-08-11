@@ -10,9 +10,13 @@
 
 <h3> American Made Products </h3>
 <ul>
-<% @american_made.each do |a| %>
-  <li> <%= link_to a.name, product_path(a)%> </li>
-<% end %>
+  <% if @american_made.any? %>
+    <% @american_made.each do |a| %>
+      <li> <%= link_to a.name, product_path(a)%> </li>
+    <% end %>
+  <% else %>
+    <p>There are no American made products yet</p>
+  <% end %>
 </ul>
 
 <p><%= link_to "Add new product", new_product_path %></p>
