@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
 helper_method :current_user
-before_action :authorize
+before_action :authenticate_user!
 
   def index
     @product = Product.find(params[:product_id])
