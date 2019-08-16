@@ -10,15 +10,8 @@
   </head>
 
   <body>
-    <ul class="hmenu">
-      <%= render 'devise/menu/user_name' %>
-      <%= render 'devise/menu/registration_items' %>
-      <%= render 'devise/menu/login_items' %>
-    </ul>
-
-<%= flash[:alert] %>
-<%= flash[:notice] %>
-
+<%= render 'layouts/navbar' %>
+<%= render 'layouts/alerts' %>
 <%= yield %>
 
   </body>
