@@ -18,6 +18,7 @@ class Product < ApplicationRecord
   .order("reviews_count DESC")
   .limit(1)
   )}
+  
 
   private
   def titleize_product
