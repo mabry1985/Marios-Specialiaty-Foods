@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-helper_method :current_user
+
 before_action :authenticate_user!
 
   def index

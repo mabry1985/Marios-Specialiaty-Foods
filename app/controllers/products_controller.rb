@@ -1,7 +1,7 @@
 require 'pry'
 
 class ProductsController < ApplicationController
-helper_method :current_user
+
  before_action :authenticate_user!, except: :index
 
   def index
