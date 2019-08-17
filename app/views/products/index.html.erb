@@ -1,7 +1,13 @@
 <h1>Mario's Speciality Foods</h1>
 
-<h3> New Products </h3>
+<h3> Most Reviewed Product</h3>
+<ul>
+<% @most_reviewed.each do |t| %>
+  <li> <%= link_to t.name, product_path(t) %></li>
+  <% end %>
+</ul>
 
+<h3> New Products </h3>
 <ul>
 <% @top.each do |t| %>
   <li> <%= link_to t.name, product_path(t)%> </li>

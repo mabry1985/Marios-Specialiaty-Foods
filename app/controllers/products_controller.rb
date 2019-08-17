@@ -7,6 +7,7 @@ class ProductsController < ApplicationController
   def index
     @american_made = Product.murica
     @top = Product.three_most_recent
+    @most_reviewed = Product.most_reviews
     render :index
   end
 
@@ -24,9 +25,9 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
     if @product.save
       flash[:notice] = "Product added to database"
-      redirect_to products_path
+      redirect_to all_products_path
     else
-      render :new
+      render :all
     end
   end
 
