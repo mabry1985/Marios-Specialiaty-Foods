@@ -59,7 +59,7 @@ class ProductsController < ApplicationController
   end
 
   def search
-    @q = "%#{params[:query]}%"
+    @q = "%#{params[:query].capitalize}%"
     @products = Product.where("name LIKE ?", @q)
     render :all
   end
