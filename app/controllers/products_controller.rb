@@ -65,6 +65,10 @@ class ProductsController < ApplicationController
     render :all
   end
 
+  def chat
+    
+  end
+
   private
   def product_params
     params.require(:product).permit(:name, :cost, :country_of_origin)
