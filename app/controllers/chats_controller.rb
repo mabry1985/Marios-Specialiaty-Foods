@@ -1,8 +1,8 @@
 class ChatsController < ApplicationController
-  before_action :authenticate_user!
+before_action :authenticate_user!
 
-  def show
-    render :index
-  end
+def show
+  render :index
+end
 
 end
