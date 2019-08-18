@@ -21,6 +21,7 @@ module MariosSpecialityFoods
     Bundler.require(*Rails.groups)
     if ['development', 'test'].include? ENV['RAILS_ENV']
     end
+    config.secret_key_base = '<%= ENV["SECRET_KEY_BASE"] %>'
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 
