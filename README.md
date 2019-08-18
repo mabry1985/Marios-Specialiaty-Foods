@@ -8,11 +8,18 @@ _A web application demonstrating my ability to use Ruby and Rails to route a sit
 
 ## Setup/Installation Requirements
 
+* Visit https://fast-depths-94717.herokuapp.com -or-
 * Clone or download and run gem bundle install in the root directory
 * Run rails s and navigate to localhost:3000 in your browser
 
+## Technologies used
+* Ruby on Rails
+* JavaScript
+* Twelio Gem for creating live chat app
+
 ## Known Bugs
-* No known bugs
+* Live chat has to be refreshed to connect to chat room
+* Submit a pull request or contact Josh at mabry1985@gmail.com to report any bugs
 
 ### License
 
