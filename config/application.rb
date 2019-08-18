@@ -19,7 +19,9 @@ require "sprockets/railtie"
 module MariosSpecialityFoods
   class Application < Rails::Application
     Bundler.require(*Rails.groups)
-    Dotenv::Railtie.load
+    if ['development', 'test'].include? ENV['RAILS_ENV']
+      Dotenv::Railtie.load
+    end
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 
