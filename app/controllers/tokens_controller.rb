@@ -1,6 +1,5 @@
 require 'pry'
 require 'twilio-ruby'
-require 'dotenv-rails'
 class TokensController < ApplicationController
   before_action :authenticate_user!
 
